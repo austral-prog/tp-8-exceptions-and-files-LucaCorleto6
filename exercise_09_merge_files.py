@@ -32,4 +32,9 @@ def merge_files(file1, file2, output):
         # hola
         # mundo
     """
-    pass  # Reemplazar con tu implementación
+    with open(file1, 'r') as archivo:
+        contenido1 = archivo.read()
+    with open(file2, 'r') as archivo:
+        contenido2 = archivo.read()
+    with open(output, 'w') as archivo:
+        archivo.write(f'{contenido1}{contenido2}')
